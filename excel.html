@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel Templates</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <h1>Chanelle's Creations - Excel</h1>
+    </header>
+
+    <nav class="top-nav">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="excel.html">Excel Templates</a></li>
+        <li><a href="cards.html">Cards</a></li>
+        <li><a href="marketing.html">Marketing</a></li>
+        <li><a href="mailto:cll.booysen@gmail.com">Contact</a></li>
+    </ul>
+</nav>
+    <section class="intro">
+        <h3>Welcome to Our Excel Templates</h2>
+        <p>Explore our range of Excel templates designed to help you manage your finances, plan your budget, and track your income effectively.</p>
+    </section>
+
+    <section class="products">
+        <div class="product">
+            <img src="images/Excel Reports.png" alt="Excel Templates">
+            <h2>Budget Planner</h2>
+            <p>Explore our range of products designed to meet your planning or financial goals.</p>
+            <p>R159</p>
+            <button class="buy-btn" onclick="addToCart('Budget Planner', 159)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="images/Excel Reports.png" alt="Birthday Cards">
+            <h2>Income tracker</h2>
+            <p>Track your income like Pro❣️💗.</p>
+            <p>R199.</p>
+            <button class="buy-btn" onclick="addToCart('Income Tracker', 199)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="images/Excel Reports.jpg" alt="Planning Templates">
+            <h2>Planning Templates</h2>
+            <p>Want to get things together, but have a lot on your plate? Get a planning template to stay on track.</p>
+            <p>R180.</p>
+            <button class="buy-btn" onclick="addToCart('Planning Templates', 180)">Add to Cart</button>
+        </div>
+
+    </section>
+        <hr>
+    <div id="cart-placeholder"></div>
+    
+    
+
+<section class="cart-display">
+        <h2>Your Cart</h2>
+        <div id="cart-items"></div>
+        <h3 id="total">Total: R0</h3>
+        <a href="checkout.html" class="buy-btn">Proceed to Checkout</a>
+
+        </section>
+
+
+<hr>
+    
+
+      <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Chanelle's Creations. All rights reserved.</p>
+            <p>Contact us at: <a href="mailto:cll.booysen@gmail.com">cll.booysen@gmail.com</a></p>
+        </div>
+    </footer>
+
+
+<script>
+  // Load the cart HTML
+  fetch('cart.html')
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById('cart-placeholder').innerHTML = html;
+    });
+</script>
+
+<!-- Shared cart logic -->
+<script src="cart.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Cards</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <h1>Chanelle's Creations - Event Cards</h1>
+    </header>
+
+    <nav class="top-nav">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="excel.html">Excel Templates</a></li>
+        <li><a href="cards.html">Cards</a></li>
+        <li><a href="marketing.html">Marketing</a></li>
+        <li><a href="mailto:cll.booysen@gmail.com">Contact</a></li>
+    </ul>
+</nav>
+
+    <section class="intro">
+        <h3>Welcome to Our Cards Section</h2>
+        <p>Explore our range of cards for any event.</p>
+    </section>
+
+    <section class="cards">
+        <div class="product">
+            <img src="images/Excel Reports.png" alt="Birthday_cards">
+            <h2>Birthday Cards</h2>
+            <p>Explore our range of products designed to meet your planning or financial goals.</p>
+            <p>R69</p>
+            <button class="buy-btn" onclick="addToCart('Birthday_cards', 69)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="images/Excel Reports.png" alt="Wedding Cards">
+            <h2>Wedding Cards</h2>
+            <p>Wishing the loved ones well❣️💗.</p>
+            <p>R62.</p>
+            <button class="buy-btn" onclick="addToCart('Wedding Cards', 62)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="images/Excel Reports.jpg" alt="Farewell Cards">
+            <h2>Farewell Cards</h2>
+            <p>Saying Goodbye to someone and haven't thought about what to say? Try our farewell cards with customised farewell messages.</p>
+            <p>R50.</p>
+            <button class="buy-btn" onclick="addToCart('Farewell Cards', 50)">Add to Cart</button>
+        </div>
+</section>
+
+   <hr>
+   <div id="cart-placeholder"></div>
+
+<section class="cart-display">
+        <h2>Your Cart</h2>
+        <div id="cart-items"></div>
+        <h3 id="total">Total: R0</h3>
+        <a href="checkout.html" class="buy-btn">Proceed to Checkout</a>
+
+</section>
+
+<hr>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Chanelle's Creations. All rights reserved.</p>
+            <p>Contact us at: <a href="mailto:cll.booysen@gmail.com">cll.booysen@gmail.com</a></p>
+        </div>
+    </footer>
+
+
+    <script>
+  // Load the cart HTML
+  fetch('cart.html')
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById('cart-placeholder').innerHTML = html;
+    });
+</script>
+
+<!-- Shared cart logic -->
+<script src="cart.js"></script>
+
+</body>
+</html>
