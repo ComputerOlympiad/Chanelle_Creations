@@ -7,6 +7,7 @@ body {
 
 h1, h2, h3 {
     text-align: center;
+    font-size: 2rem;
 }
 
 h2 {
@@ -14,13 +15,13 @@ h2 {
 }
 
 h3 {
-    color: #140e32;
+    color: #3E362E;
 }
 
 
 /* Header Styling */
 header {
-    background-color: #140e32;
+    background-color: #3E362E;
     color: aliceblue;
     padding: 30px 0;
     text-align: center;
@@ -43,16 +44,36 @@ header h1 {
     padding: 20px;
 }
 
+/*
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
     padding: 20px;
 }
+*/
+
+.cards {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 1rem;
+  gap: 1rem; /* space between cards */
+}
+
+.product {
+  min-width: 300px;
+  flex: 0 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 1rem;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
 
 
 .product {
-    background-color: #140e32;
+    background-color: #3E362E;
     color: aliceblue;
     padding: 20px;
     border-radius: 10px;
@@ -69,6 +90,33 @@ header h1 {
     margin-bottom: 15px;
 }
 
+.product img {
+    max-height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.product video, .marketing-content video {
+    width: 50%;
+    height: auto;
+    border-color: #ccc;
+    border-style: groove;
+    border-width: 0cap 5px 5px 5px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    object-fit: cover;
+    display: block;
+    margin: auto;
+}
+
+.cards::-webkit-scrollbar {
+  display: none;
+}
+.cards {
+  -ms-overflow-style: none;  /* IE/Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
 /*-----------------------INTRO_SECTION-------------------------*/
 
 .intro p {
@@ -80,7 +128,7 @@ header h1 {
 .buy-btn {
     display: inline-block;
     background-color: aliceblue;
-    color: #140e32;
+    color: #3E362E;
     padding: 10px 15px;
     border: none;
     border-radius: 5px;
@@ -89,19 +137,6 @@ header h1 {
     font-weight: bold;
 }
 
-/*-----------------------SERVICES_SECTION-------------------------*/
-.services {
-    max-width: 900px;
-    margin: 20px auto;
-    padding: 20px;
-}
-
-.service {
-    background-color: #140e32;
-    color: aliceblue;
-    padding: 20px 10px;
-    border-radius: 10px;
-}
 
 /*-----------------------MARKETING_SECTION-------------------------*/
 .marketing {
@@ -112,7 +147,7 @@ header h1 {
 }
 
 .marketing-content {
-    background-color: #140e32;
+    background-color: #3E362E;
     color: aliceblue;
     padding: 20px;
     border-radius: 10px;
@@ -120,7 +155,7 @@ header h1 {
 
 /*-----------------------FOOTER-------------------------*/
 footer {
-    background-color: #140e32;
+    background-color: #3E362E;
     color: aliceblue;
     text-align: center;
     padding: 20px;
@@ -136,7 +171,7 @@ footer a:hover {
 
 /*-----------------------TOP NAVIGATION BAR-------------------------*/
 .top-nav {
-    background-color: #140e32;
+    background-color: #3E362E;
     padding: 10px 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
@@ -165,7 +200,7 @@ footer a:hover {
 
 .top-nav a:hover {
     background-color: aliceblue;
-    color: #140e32;
+    color: #AC8968;
 }
 
 
@@ -201,7 +236,7 @@ footer a:hover {
 }
 
 .top-nav {
-    background-color: #140e32;
+    background-color: #AC8968;
     padding: 10px 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     animation: slideDown 0.6s ease-out forwards;
